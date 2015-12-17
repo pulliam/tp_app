@@ -4,6 +4,11 @@ class UsersController < ApplicationController
 	  def show
 		  @user = User.find(session[:user_id]) if session[:user_id]
 	    @accounts = Account.where(user_id: @user.id.to_i)
+      totalize = []
+      @accounts.each do |account|
+        totalize.push(account.amount)
+      end
+      @total_amount = totalize.inject(:+)
     end
 
 	  def index
