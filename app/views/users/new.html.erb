@@ -1,0 +1,11 @@
+<h1>Welcome to TP Bank.</h1>
+<h2>Sign up and enjoy the best money management system ever created!</h2>
+
+<%= form_for @user, url: {action: "create"} do |f| %>
+<%= f.text_field :name, :placeholder => "Full Name" %>
+<%= f.text_field :username, :placeholder => "Choose an Username" %>
+<%= f.text_field :email, :placeholder => "Email" %>
+<%= f.password_field :password, :placeholder => "Password" %>
+<%= f.password_field :password_confirmation, :placeholder => "Password" %>
+<%= f.submit "Submit" %>
+<% end %>

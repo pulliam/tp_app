@@ -1,0 +1,21 @@
+.table-responsive {
+    width: 50% !important;
+    margin: 0px auto;
+}
+
+body { 
+	padding-top: 70px; 
+	padding-bottom: 40px;
+	background: url('http://www.coydavidson.com/wp-content/uploads/2009/09/94803684.jpg'); 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.jumbotronwhite{
+	background-color: rgba(255,255,255,0.8) !important;
+    /*background-color: transparent !important;*/
+    text-align: center;
+    margin-top: 0px !important;
+}

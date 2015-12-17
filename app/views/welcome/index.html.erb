@@ -1,0 +1,9 @@
+<h1>Welcome to TP Bank</h1>
+
+<h2>How can you help you today?</h2>
+<br><br>
+<button><%= link_to 'Join TP Bank', new_user_path %></button>
+
+<button><%= link_to_if(@current_user.nil?, "Login", { controller: "sessions", action: "new" }) %></button>
+    
+

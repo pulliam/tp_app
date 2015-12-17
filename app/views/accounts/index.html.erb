@@ -1,0 +1,11 @@
+<table>
+<tbody>
+	  <p><strong>View Your Accounts:</strong></p>
+	 	<% @accounts.each do |account| %>
+		  <tr>
+      	    <td><%= link_to account.account_name, user_account_path(@user, account) %></td>
+      	    <td><%= link_to 'Edit Account', edit_user_account_path(@user, account) %></td>
+    	  </tr>
+ 		<% end %>
+ 	</tbody>
+</table>

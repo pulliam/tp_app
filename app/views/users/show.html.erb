@@ -1,0 +1,22 @@
+<img src="<%= @user.avatar_url %>"><p>
+
+  <p>Welcome <%= @user.name %> !</p>
+  Username: <%= @user.username %> | E-mail: <%= @user.email %>
+  <br><br>
+ 
+<table class="table table-responsive table-hover">
+	<tbody>
+	  <p><strong>View Your Accounts:</strong></p>
+	 	<% @accounts.each do |account| %>
+		  <tr>
+      	    <td><%= link_to account.account_name, user_account_path(@user, account) %></td>
+      	    <td><%= link_to 'Edit Account', edit_user_account_path(@user, account) %></td>
+            <td><%= link_to 'View Account', user_account_path(@user, account) %></td>
+    	  </tr>
+ 		<% end %>
+ 	</tbody>
+</table>
+
+<br><br>
+<%= link_to 'Edit My Profile', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>  | <%= link_to 'Create New Account', new_user_account_path(@user) %> | <%=link_to "Log Out", logout_path %>

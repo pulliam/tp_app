@@ -1,0 +1,26 @@
+<h1>Update your Profile, <%= @user.name %></h1>
+
+<%= form_for @user, url: {action: "update"} do |f| %>
+
+<div>
+<%= f.label :name %>:
+<%= f.text_field :name, :placeholder => @user.name %>
+</div>
+
+<div>
+<%= f.label :username %>:
+<%= f.text_field :username, :value => @user.username %>
+</div>
+
+<div>
+<%= f.label :email %>:
+<%= f.text_field :email, :value => @user.email %>
+</div>
+
+<div>
+<%= f.label :avatar_url %>:
+<%= f.text_field :avatar_url, :value => @user.avatar_url %>
+</div>
+
+<%= f.submit "Submit" %>
+<% end %>

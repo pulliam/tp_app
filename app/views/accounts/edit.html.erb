@@ -1,0 +1,17 @@
+<h1>Change an new Account!</h1>
+
+<%= form_for @account, url: {action: "update"} do |f| %>
+
+<div id="account_type">
+<%= f.label :account_name %>:
+<%= f.text_field :account_name, :placeholder => @account.account_name %>
+</div>
+<div id="amount_account">
+<%= f.label :amount %>:
+<%= f.text_field :amount, :value => @account.amount %>
+</div>
+
+<%= f.hidden_field :status, :value => "active" %>
+<%= f.hidden_field :user_id, :value => session[:user_id] %>
+<%= f.submit "Submit" %>
+<% end %>
